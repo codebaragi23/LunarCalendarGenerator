@@ -1,0 +1,5 @@
+.vs
+__pycache__
+build
+_backup
+debug.log
