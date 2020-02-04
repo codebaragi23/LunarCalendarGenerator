@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>logo.png</file>
+    <file>calendar.svg</file>
+  </qresource>
+</RCC>

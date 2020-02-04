@@ -1,5 +1,11 @@
+### Directory ###
 .vs
 __pycache__
 build
 _backup
-debug.log
+
+### Files ###
+*_ui.py
+*_rc.py
+*.spec
+*.log

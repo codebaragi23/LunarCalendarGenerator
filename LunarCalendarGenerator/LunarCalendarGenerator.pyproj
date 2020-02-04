@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{a45ab1e3-dc54-49f6-a61d-442a34e916ab}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test.py</StartupFile>
+    <StartupFile>LunarCalendarGenerator.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,7 +27,13 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="LunarCalendarGenerator.py" />
+    <Compile Include="LunarCalendarGenerator_ui.py" />
     <Compile Include="test.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BuildExecutable.bat" />
+    <Content Include="LunarCalendarGenerator.qrc" />
   </ItemGroup>
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in

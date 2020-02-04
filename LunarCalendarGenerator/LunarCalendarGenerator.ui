@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>585</width>
+    <height>610</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>LunaCalenderGenerator-v1.0</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="LunarCalendarGenerator.qrc">
+    <normaloff>:/icons/calendar.svg</normaloff>:/icons/calendar.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="conv">
+       <attribute name="title">
+        <string>음력/양력 변환</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>317</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>양력을 음력으로 변환하거나 음력을 양력으로 변환합니다.</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_1">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>양력</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="solar_date">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="maximumDateTime">
+             <datetime>
+              <hour>23</hour>
+              <minute>59</minute>
+              <second>59</second>
+              <year>2050</year>
+              <month>12</month>
+              <day>31</day>
+             </datetime>
+            </property>
+            <property name="maximumDate">
+             <date>
+              <year>2050</year>
+              <month>12</month>
+              <day>31</day>
+             </date>
+            </property>
+            <property name="minimumDate">
+             <date>
+              <year>1752</year>
+              <month>9</month>
+              <day>14</day>
+             </date>
+            </property>
+            <property name="displayFormat">
+             <string> yyyy년 MM월 dd일</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="sol2lun_btn">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>양력을 음력으로 변환</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>음력</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="lunar_date">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="maximumDateTime">
+             <datetime>
+              <hour>23</hour>
+              <minute>59</minute>
+              <second>59</second>
+              <year>2050</year>
+              <month>11</month>
+              <day>18</day>
+             </datetime>
+            </property>
+            <property name="maximumDate">
+             <date>
+              <year>2050</year>
+              <month>11</month>
+              <day>18</day>
+             </date>
+            </property>
+            <property name="minimumDate">
+             <date>
+              <year>1752</year>
+              <month>9</month>
+              <day>14</day>
+             </date>
+            </property>
+            <property name="displayFormat">
+             <string> yyyy년 MM월 dd일</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="leap_cb">
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>평달</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>윤달</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>알지 못함</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="lun2sol_btn">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>음력을 양력으로 변환</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="explain_tb"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="anniversary">
+       <attribute name="title">
+        <string>기념일 생성</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>317</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>음력 기념일을 추가하여 달력 파일을 생성합니다. 
+(2050년 11월 18일까지 매년 반복 생성됩니다.)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>음력일자</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDateEdit" name="anni_date">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="maximumDateTime">
+                 <datetime>
+                  <hour>23</hour>
+                  <minute>59</minute>
+                  <second>59</second>
+                  <year>2050</year>
+                  <month>11</month>
+                  <day>18</day>
+                 </datetime>
+                </property>
+                <property name="maximumDate">
+                 <date>
+                  <year>2050</year>
+                  <month>11</month>
+                  <day>18</day>
+                 </date>
+                </property>
+                <property name="minimumDate">
+                 <date>
+                  <year>1752</year>
+                  <month>9</month>
+                  <day>14</day>
+                 </date>
+                </property>
+                <property name="displayFormat">
+                 <string> MM월 dd일</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="leap_cb_2">
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>평달</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>윤달</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>기념일</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="anni_edit"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QCheckBox" name="ani_cycle_cb">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>기념일에 주기 추가</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>시작</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="start_cycle_sb">
+                <property name="minimumSize">
+                 <size>
+                  <width>60</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QPushButton" name="add_btn">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>추가</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="remove_btn">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>삭제</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Minimum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="anni_tw">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::CustomDashLine</enum>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>예제</string>
+           </property>
+           <property name="background">
+            <color>
+             <red>204</red>
+             <green>204</green>
+             <blue>204</blue>
+            </color>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>음력일자</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>기념일</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>시작</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>설명</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>01월 01일</string>
+           </property>
+           <property name="background">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>204</green>
+              <blue>204</blue>
+             </color>
+            </brush>
+           </property>
+           <property name="foreground">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>##생신</string>
+           </property>
+           <property name="background">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>204</green>
+              <blue>204</blue>
+             </color>
+            </brush>
+           </property>
+           <property name="foreground">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>60</string>
+           </property>
+           <property name="background">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>204</green>
+              <blue>204</blue>
+             </color>
+            </brush>
+           </property>
+           <property name="foreground">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </property>
+          </item>
+          <item row="0" column="3">
+           <property name="text">
+            <string>dd세</string>
+           </property>
+           <property name="background">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>204</green>
+              <blue>204</blue>
+             </color>
+            </brush>
+           </property>
+           <property name="foreground">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QProgressBar" name="generate_pb">
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="gen_btn">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>생성</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QPushButton" name="about_btn">
+        <property name="text">
+         <string>About</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="LunarCalendarGenerator.qrc">:/icons/logo.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>&lt;a href='https://codebaragi23.github.io/'&gt; website &lt;/a&gt;</string>
+        </property>
+        <property name="openExternalLinks">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="LunarCalendarGenerator.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>sol2lun_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sol2lun()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>638</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>460</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lun2sol_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>lun2sol()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>638</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>105</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>add_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>add_anni()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>555</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>remove_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>remove_anni()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>636</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>458</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gen_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>generate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>605</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>660</x>
+     <y>591</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leap_cb</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>check_leap()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>235</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>274</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>search()</slot>
+  <slot>crawling()</slot>
+  <slot>select_all()</slot>
+  <slot>select_outputpath()</slot>
+  <slot>select_toon()</slot>
+  <slot>sort()</slot>
+  <slot>change_domain()</slot>
+  <slot>open_outputpath()</slot>
+  <slot>edit_domain()</slot>
+  <slot>sol2lun()</slot>
+  <slot>lun2sol()</slot>
+  <slot>add_anni()</slot>
+  <slot>remove_anni()</slot>
+  <slot>generate()</slot>
+  <slot>check_leap()</slot>
+ </slots>
+</ui>
